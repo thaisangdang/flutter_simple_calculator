@@ -1,10 +1,11 @@
+// Custom Button Widget
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final String buttonText;
   final Color color;
   final Color textColor;
-  final VoidCallback buttonTapped; // Function passed from parent
+  final VoidCallback buttonTapped;
 
   const MyButton({
     super.key,
@@ -18,14 +19,17 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: buttonTapped,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Container(
-          color: color,
-          child: Center(
-            child: Text(
-              buttonText,
-              style: TextStyle(color: textColor, fontSize: 20),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Container(
+            color: color,
+            child: Center(
+              child: Text(
+                buttonText,
+                style: TextStyle(color: textColor, fontSize: 20),
+              ),
             ),
           ),
         ),
