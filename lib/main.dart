@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[100],
+      backgroundColor: Colors.deepPurple[50],
       body: Column(
         children: [
           Expanded(
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                       userAnswer = '';
                     }),
                     buttonText: buttons[index],
-                    color: Colors.green,
+                    color: Colors.blueGrey,
                     textColor: Colors.white,
                   );
                 } else if (index == 1) {
@@ -127,14 +127,14 @@ class _HomePageState extends State<HomePage> {
                       }
                     }),
                     buttonText: buttons[index],
-                    color: Colors.red,
+                    color: Colors.blueGrey,
                     textColor: Colors.white,
                   );
                 } else if (index == buttons.length - 1) {
                   return MyButton(
                     buttonTapped: () => setState(() => equalPressed()),
                     buttonText: buttons[index],
-                    color: Colors.deepPurple,
+                    color: Colors.blueGrey,
                     textColor: Colors.white,
                   );
                 } else {
@@ -143,11 +143,11 @@ class _HomePageState extends State<HomePage> {
                         setState(() => userQuestion += buttons[index]),
                     buttonText: buttons[index],
                     color: isOperator(buttons[index])
-                        ? Colors.deepPurple
-                        : Colors.deepPurple[50]!,
+                        ? Colors.blueGrey
+                        : Colors.white,
                     textColor: isOperator(buttons[index])
                         ? Colors.white
-                        : Colors.deepPurple,
+                        : Colors.black,
                   );
                 }
               },
