@@ -23,7 +23,7 @@ By building this project, you will learn:
 
 1. **Ensure you are in the project directory:**
     
-    `cd simple_calculator`
+    `cd flutter_simple_calculator`
     
 2. **Install Dependencies:**
     
